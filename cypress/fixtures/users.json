@@ -1,0 +1,14 @@
+{
+  "invalidUser": {
+    "username": "testuser",
+    "password": "wrongPassword123"
+  },
+  "testUser": {
+    "password": "testPassword123"
+  },
+  "activeUser": {
+    "username": "romed",
+    "fullName": "Anton Mykhailenko",
+    "nickname": "romed"
+  }
+}

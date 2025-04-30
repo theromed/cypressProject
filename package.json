@@ -4,12 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:login:positive": "npx cypress run --env allure=true --env grep=@positive --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "test:login:negative": "npx cypress run --env allure=true --env grep=@negative --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "test:timeline:testpilot": "npx cypress run --env CYPRESS_PROJECT_SLUG=romed-testpilot-ui-api-autotests --spec 'cypress/e2e/timeline.cy.js' && allure generate allure-results --clean && allure open",
+    "test:all": "npx cypress run --env allure=true --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "test:backlog": "npx cypress run --env allure=true --spec 'cypress/e2e/backlog.cy.js' && allure generate allure-results --clean && allure open",
+    "test:login": "npx cypress run --env allure=true --spec 'cypress/e2e/login.cy.js' && allure generate allure-results --clean && allure open",
+    "test:timeline": "npx cypress run --env allure=true --spec 'cypress/e2e/timeline.cy.js' && allure generate allure-results --clean && allure open",
+    "test:positive": "npx cypress run --env allure=true --env grep=@positive --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "test:negative": "npx cypress run --env allure=true --env grep=@negative --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "test:sprint": "npx cypress run --env allure=true --env grep=@sprint --spec 'cypress/e2e/**/*.cy.js' && allure generate allure-results --clean && allure open",
+    "open:report": "allure open",
+    "clean:reports": "rm -rf allure-results allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.3.0"
+    "@faker-js/faker": "^9.7.0",
+    "@shelex/cypress-allure-plugin": "^2.41.0",
+    "cypress": "^14.3.0",
+    "cypress-grep": "^3.0.4",
+    "dotenv": "^16.5.0"
   }
 }

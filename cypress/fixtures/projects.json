@@ -1,0 +1,12 @@
+{
+  "romed-testpilot-ui-api-autotests": {
+    "slug": "romed-testpilot-ui-api-autotests",
+    "title": "TestPilot: UI & API autotests",
+    "description": "TestPilot is a pet project dedicated to automated UI and API testing using Cypress. The project will test the Taiga task management platform, including authorization scenarios, working with lists and tables."
+  },
+  "romed-mytestcases": {
+    "slug": "romed-mytestcases",
+    "title": "MyTestCases",
+    "description": "Test cases that will be automated using cypress"
+  }
+}

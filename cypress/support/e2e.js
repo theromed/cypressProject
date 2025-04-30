@@ -15,3 +15,18 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import "@shelex/cypress-allure-plugin";
+import "cypress-grep";
+
+//Cypress.on("log:added", (options) => {
+//  if (options.message.includes(Cypress.env("CYPRESS_PASSWORD"))) {
+//    return false; // 👈 Убираем запись пароля в логах
+//  }
+//});
+
+Cypress.on("uncaught:exception", (err) => {
+  if (err.message && err.message.includes("ckeditor-duplicated-modules")) {
+    // Возвращаем false, чтобы не завершать тест при возникновении этой ошибки
+    return false;
+  }
+});
