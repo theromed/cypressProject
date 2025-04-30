@@ -24,23 +24,35 @@ To get started with the project, follow these steps:
 
 ### Run all tests
 Run all available tests across the project:
+ ```
 npm run test:all
+  ```
 ### Run tests for specific pages
 To run tests for specific pages, use the following commands:
 
 - Backlog tests:
-- npm run test:backlog
+```
+npm run test:backlog
+```
 - Login tests: 
-- npm run test:login
+```
+npm run test:login
+```
 - Timeline tests:
-- npm run test:timeline
+```
+npm run test:timeline
+```
 - ### Run tests by tags
 To filter tests by specific tags, use these commands:
 
 - Positive tests:
-- npm run test:positive
+ ```
+npm run test:positive
+```
 - Negative tests:
-- npm run test:negative
+```
+npm run test:negative
+```
 ---
 
 ## Generating and Viewing Reports
