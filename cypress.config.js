@@ -24,10 +24,10 @@ module.exports = defineConfig({
     },
   },
   env: {
-    CYPRESS_USERNAME: process.env.CYPRESS_USERNAME,
-    CYPRESS_PASSWORD: process.env.CYPRESS_PASSWORD,
-    CYPRESS_EMAIL:    process.env.CYPRESS_EMAIL,
-    CYPRESS_PROJECT_SLUG: "romed-testpilot-ui-api-autotests"
+    CYPRESS_USERNAME: process.env.CYPRESS_USERNAME || "romedtestuser",
+    CYPRESS_PASSWORD: process.env.CYPRESS_PASSWORD || "qwerty",
+    CYPRESS_EMAIL:    process.env.CYPRESS_EMAIL || "romedtestuser@getnada.com",
+    CYPRESS_PROJECT_SLUG: process.env.CYPRESS_PROJECT_SLUG || "romed-testpilot-ui-api-autotests"
   },
 });
 

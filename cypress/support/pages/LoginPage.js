@@ -39,7 +39,7 @@ class LoginPage {
   verifyValidationMessages() {
     cy.get("[name='username']").should("have.attr", "data-required");
     cy.get("[name='username']").then(($input) => {
-      expect($input[0].validationMessage).to.eq("Заполните это поле.");
+      expect($input[0].validationMessage).to.eq("Пожалуйста, заполните это поле.");
     });
   }
 
